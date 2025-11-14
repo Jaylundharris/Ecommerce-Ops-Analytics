@@ -1,44 +1,142 @@
-# SQL Project: Retail Operations & Analytics (Warehouse-to-Analytics)
+# 🛒 E-Commerce Operations Analytics  
+**SQL • Data Cleaning • Business Insights • Portfolio Project**
 
-**Goal:** Demonstrate SQL skills end-to-end using a realistic retail dataset that maps to ops/logistics + analytics roles.
+This project analyzes a fictional e-commerce company’s operations data across customers, orders, products, order items, returns, inventory, and shipments.  
+It demonstrates a full analytics workflow — **from raw data → cleaned datasets → SQL insights → business recommendations**.
 
-## 📦 What’s Included
-- `retail_ops_analytics.sqlite` — SQLite database with **customers, products, orders, order_items, shipments, inventory, returns**.
-- `queries.sql` — 15 core SQL prompts + a few worked examples.
+---
 
-## 🗂️ Schema (ERD - text)
-- customers(customer_id, full_name, email, state, signup_date)
-- products(product_id, product_name, category, unit_price)
-- orders(order_id, customer_id, order_date, status)
-- order_items(order_id, product_id, quantity, unit_price, discount)
-- shipments(shipment_id, order_id, warehouse, carrier, shipped_date, delivered_date)
-- inventory(product_id, on_hand, reorder_point, last_restock_date)
-- returns(return_id, order_id, product_id, return_date, reason, refund_amount)
+## 📌 Project Goals
 
-## 🔎 15 SQL Questions to Answer
-1) Revenue by Month (last 6 months), excluding cancelled orders and accounting for discounts.
-2) Top 10 Products by Revenue and their categories.
-3) Customer Repeat Rate: % of customers with ≥2 orders in the last 90 days.
-4) Average Order Value (AOV) by month.
-5) Delivery SLA: % of delivered orders arriving within 5 days of ship date, by carrier and warehouse.
-6) Return Rate by category. Which categories have the highest refund amounts?
-7) Inventory Risk: products where on_hand < reorder_point with last_restock_date.
-8) Cohort Analysis: customers grouped by signup month; month-1 repeat purchase rate.
-9) State-Level Performance: Top 5 states by revenue in the last 120 days.
-10) Cancellation Heatmap: Which weekdays see the most cancellations?
-11) Category Momentum: 30-day rolling revenue by category (window function).
-12) Order-to-Ship Lag: Average hours between order_date and shipped_date by warehouse.
-13) High-Value Customers: customers with lifetime spend ≥ $1,000.
-14) Basket Analysis: For Electronics, avg items per order and % orders with ≥2 electronics items.
-15) Refund Leakage: compare total refunds vs delivered revenue over the last 60 days.
+This analysis simulates the real work performed by Data Analysts in:
+- E-commerce
+- Operations / Logistics
+- Customer analytics
+- Sportsbook & fantasy sports operations teams (PrizePicks, Underdog, FanDuel)
 
-## 🧪 Stretch
-- Build a simple chart (Power BI or Excel) for Q1, Q5, or Q9 and add a screenshot to your portfolio/LinkedIn.
-- Create views for common metrics (e.g., v_order_revenue, v_delivered_orders).
+**Objectives:**
+1. Clean, validate, and structure multiple raw CSV files.  
+2. Build a relational SQLite database (`ecommerce_ops.db`).  
+3. Write SQL queries to answer real business questions.  
+4. Understand customer behavior, product performance, revenue drivers, returns, and shipping efficiency.  
+5. Present insights clearly with markdown summaries and recommendations.
 
-## 📤 How to Use
-Open the `.sqlite` file in DB Browser for SQLite or DBeaver. Run the examples in `queries.sql`, then add your answers below each prompt.
+---
 
-## ✅ Portfolio Tips
-In your README: include business context, SQL snippets, and 2–3 key insights.
-On LinkedIn: share 1 chart + 4 bullet insights. Keep it honest and clear.
+## 🧰 Tools & Skills Demonstrated
+
+- **SQL (SQLite)** → joins, aggregations, filtering, date functions, HAVING clauses  
+- **Python / Pandas** → data cleaning & preprocessing  
+- **Jupyter Notebook** → analysis structure & storytelling  
+- **Markdown** → insights, commentary, business recommendations  
+- **Data Modeling** → creating a small star-schema structure  
+- **KPI Development** → operational metrics used in real analyst roles  
+
+---
+
+## 📂 Project Structure
+
+─ 01_ecommerce_ops_analytics/
+├── data/
+│ ├── raw/ ← raw CSV files
+│ └── processed/ ← cleaned datasets + ecommerce_ops.db
+├── 02_docs/
+│ ├── 01_project_overview.md
+│ ├── 02_methodology.md
+│ ├── 03_kpis.md
+│ └── 04_findings.md
+├── 03_notebooks/
+│ ├── 01_data_exploration.ipynb
+│ ├── 02_data_cleaning.ipynb
+│ └── 03_sales_analysis.ipynb
+├── 04_sql/
+│ ├── 01_create_tables.sql
+│ ├── 02_queries.sql
+│ └── 03_analysis.sql
+└── README.md
+
+
+## 🧼 Data Cleaning Summary
+
+All datasets were cleaned using Python/Pandas:  
+- Standardized column names  
+- Fixed inconsistent casing  
+- Trimmed whitespace  
+- Converted data types  
+- Repaired numeric formats  
+- Handled missing values  
+- Validated `customer_id`, `order_id`, `product_id` relationships  
+- Built the final relational database: **`ecommerce_ops.db`**
+
+Detailed steps are inside **02_data_cleaning.ipynb**.
+
+---
+
+## 📊 Key Business Questions Answered
+
+The analysis answers 10 real-world operations questions, including:
+
+1. Top customers by total revenue  
+2. Average Order Value (AOV)  
+3. Products generating > $1,000 in revenue  
+4. Repeat-purchase customers (≥ 3 orders in last 90 days)  
+5. Fastest warehouse by delivery time  
+6. Carrier performance (on-time delivery rate)  
+7. Category-level revenue & units sold  
+8. Total returned discounted orders  
+9. Last 60-day cancellation rate  
+10. Customer recency (most recent order dates)
+
+Each question includes:
+- SQL query  
+- Result table  
+- Business interpretation  
+
+All are inside **03_sales_analysis.ipynb**.
+
+---
+
+## 📈 Example Insights (from findings)
+
+- **DFW-02 is the fastest warehouse** with ~2.9-day delivery time.  
+- **Electronics drive most of the company’s revenue**, followed by Sports.  
+- **AOV = $332.33**, suggesting high average spend per order.  
+- **Beauty sold the most units (76)** but was low in total revenue → low price point inventory.  
+- **Only one discounted product was returned**, showing strong discounting performance.  
+- **Cancellation rate is 9.1%**, within normal operational range.
+
+These insights mirror the type of work performed by real analysts in operations, e-commerce, and sports data teams.
+
+---
+
+## 🚀 Next Steps
+
+- Build customer segmentation using **RFM Analysis**  
+- Add dashboards (Power BI or Tableau)  
+- Expand SQL with advanced window functions  
+- Create predictive models (order frequency, return probability)  
+- Begin second analytics project for deeper portfolio depth  
+
+---
+
+## 📞 Contact
+
+If you'd like to discuss the project or collaborate:
+
+**Jay Harris**  
+Aspiring Data Analyst | SQL • Python • Operations Analytics  
+GitHub: (https://github.com/Jaylundharris)
+LinkedIn: https://www.linkedin.com/in/jaylund-harris-571936384/
+
+---
+
+## ⭐ Why This Project Matters
+
+This project was built to demonstrate the **four essential analyst skills**:
+
+1. **Data Cleaning**  
+2. **SQL Querying**  
+3. **Analytical Thinking**  
+4. **Business Communication**
+
+It’s built exactly like the challenges used by companies such as PrizePicks, Underdog, and DraftKings when evaluating junior analysts.
