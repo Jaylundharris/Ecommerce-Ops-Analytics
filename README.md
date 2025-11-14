@@ -123,6 +123,7 @@ If you'd like to discuss the project or collaborate:
 
 **Jaylund Harris**  
 Aspiring Data Analyst | SQL • Python • Operations Analytics  
+Gmail: jaylundharris@gmail.com
 GitHub: (https://github.com/Jaylundharris)
 LinkedIn: https://www.linkedin.com/in/jaylund-harris-571936384/
 
