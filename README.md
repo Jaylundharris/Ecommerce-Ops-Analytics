@@ -105,8 +105,6 @@ All are inside **03_sales_analysis.ipynb**.
 - **Only one discounted product was returned**, showing strong discounting performance.  
 - **Cancellation rate is 9.1%**, within normal operational range.
 
-These insights mirror the type of work performed by real analysts in operations, e-commerce, and sports data teams.
-
 ---
 
 ## 🚀 Next Steps
@@ -123,7 +121,7 @@ These insights mirror the type of work performed by real analysts in operations,
 
 If you'd like to discuss the project or collaborate:
 
-**Jay Harris**  
+**Jaylund Harris**  
 Aspiring Data Analyst | SQL • Python • Operations Analytics  
 GitHub: (https://github.com/Jaylundharris)
 LinkedIn: https://www.linkedin.com/in/jaylund-harris-571936384/
@@ -138,5 +136,3 @@ This project was built to demonstrate the **four essential analyst skills**:
 2. **SQL Querying**  
 3. **Analytical Thinking**  
 4. **Business Communication**
-
-It’s built exactly like the challenges used by companies such as PrizePicks, Underdog, and DraftKings when evaluating junior analysts.
