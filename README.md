@@ -1,139 +1,199 @@
-# 🛒 E-Commerce Operations Analytics  
-**SQL • Data Cleaning • Business Insights • Portfolio Project**
+# 📦 E-Commerce Operations Analytics  
+### **SQL • Data Cleaning • Business Insights • Power BI Dashboard**
 
-This project analyzes a fictional e-commerce company’s operations data across customers, orders, products, order items, returns, inventory, and shipments.  
-It demonstrates a full analytics workflow — **from raw data → cleaned datasets → SQL insights → business recommendations**.
+This project analyzes a fictional e-commerce company’s operational performance across **customers, orders, products, order items, returns, inventory, and shipments**.
+
+It demonstrates an end-to-end analytics workflow:  
+**raw CSVs → cleaned datasets → SQLite database → SQL insights → Power BI dashboard → business recommendations.**
 
 ---
 
 ## 📌 Project Goals
 
-This analysis simulates the real work performed by Data Analysts in:
-- E-commerce
-- Operations / Logistics
-- Customer analytics
-- Sportsbook & fantasy sports operations teams (PrizePicks, Underdog, FanDuel)
+Simulate real-world work performed by Data Analysts in:
 
-**Objectives:**
+- E-commerce  
+- Operations & logistics  
+- Customer analytics  
+- Sportsbook-style operations teams (similar analytical workflow)
+
+### 🎯 Objectives
 1. Clean, validate, and structure multiple raw CSV files.  
-2. Build a relational SQLite database (`ecommerce_ops.db`).  
+2. Build a relational SQLite database (**ecommerce_ops.db**).  
 3. Write SQL queries to answer real business questions.  
-4. Understand customer behavior, product performance, revenue drivers, returns, and shipping efficiency.  
-5. Present insights clearly with markdown summaries and recommendations.
+4. Understand customer behavior, category revenue drivers, returns, and shipping efficiency.  
+5. Present insights clearly through markdown summaries and Power BI visualizations.
 
 ---
 
 ## 🧰 Tools & Skills Demonstrated
 
-- **SQL (SQLite)** → joins, aggregations, filtering, date functions, HAVING clauses  
-- **Python / Pandas** → data cleaning & preprocessing  
-- **Jupyter Notebook** → analysis structure & storytelling  
-- **Markdown** → insights, commentary, business recommendations  
-- **Data Modeling** → creating a small star-schema structure  
-- **KPI Development** → operational metrics used in real analyst roles  
+- **SQL (SQLite)** – joins, aggregations, filtering, window functions, HAVING clauses  
+- **Python / Pandas** – data cleaning, preprocessing, ETL  
+- **Jupyter Notebook** – analysis workflow & documentation  
+- **Power BI** – dashboards & KPIs  
+- **Data Modeling** – star-schema creation  
+- **KPI Development** – operational metrics used in real analyst roles  
+- **Markdown + Storytelling** – insights & recommendations  
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-─ 01_ecommerce_ops_analytics/
+
+01_ecommerce_ops_analytics/
+│
 ├── data/
-│ ├── raw/ ← raw CSV files
-│ └── processed/ ← cleaned datasets + ecommerce_ops.db
+│ ├── processed/
+│ └── raw/
+│
 ├── 02_docs/
 │ ├── 01_project_overview.md
 │ ├── 02_methodology.md
 │ ├── 03_kpis.md
 │ └── 04_findings.md
+│
 ├── 03_notebooks/
 │ ├── 01_data_exploration.ipynb
 │ ├── 02_data_cleaning.ipynb
 │ └── 03_sales_analysis.ipynb
+│
 ├── 04_sql/
 │ ├── 01_create_tables.sql
 │ ├── 02_queries.sql
 │ └── 03_analysis.sql
+│
+├── 05_visuals/
+│ ├── Full_View_Dashboard.png
+│ ├── Return_Rate.png
+│ ├── Revenue_Over_Time.png
+│ ├── Total_Revenue_by_category.png
+│ ├── Total_Revenue_by_city.png
+│ ├── Total_Revenue_by_product.png
+│ └── Total_Revenue.png
+│
+├── 06_powerbi/
+│ └── Ecommerce_Ops_Analytics_Dashboard.pbix
+│
+├── LICENSE
 └── README.md
 
 
+---
+
 ## 🧼 Data Cleaning Summary
 
-All datasets were cleaned using Python/Pandas:  
+All raw datasets were cleaned with Python/Pandas:
+
 - Standardized column names  
 - Fixed inconsistent casing  
-- Trimmed whitespace  
+- Removed unnecessary whitespace  
 - Converted data types  
-- Repaired numeric formats  
-- Handled missing values  
+- Repaired numeric formatting  
 - Validated `customer_id`, `order_id`, `product_id` relationships  
-- Built the final relational database: **`ecommerce_ops.db`**
+- Built a complete relational database: **ecommerce_ops.db**
 
-Detailed steps are inside **02_data_cleaning.ipynb**.
-
----
-
-## 📊 Key Business Questions Answered
-
-The analysis answers 10 real-world operations questions, including:
-
-1. Top customers by total revenue  
-2. Average Order Value (AOV)  
-3. Products generating > $1,000 in revenue  
-4. Repeat-purchase customers (≥ 3 orders in last 90 days)  
-5. Fastest warehouse by delivery time  
-6. Carrier performance (on-time delivery rate)  
-7. Category-level revenue & units sold  
-8. Total returned discounted orders  
-9. Last 60-day cancellation rate  
-10. Customer recency (most recent order dates)
-
-Each question includes:
-- SQL query  
-- Result table  
-- Business interpretation  
-
-All are inside **03_sales_analysis.ipynb**.
+Detailed cleaning steps live in **`02_data_cleaning.ipynb`**.
 
 ---
 
-## 📈 Example Insights (from findings)
+## 📊 Power BI Dashboard
 
-- **DFW-02 is the fastest warehouse** with ~2.9-day delivery time.  
-- **Electronics drive most of the company’s revenue**, followed by Sports.  
-- **AOV = $332.33**, suggesting high average spend per order.  
-- **Beauty sold the most units (76)** but was low in total revenue → low price point inventory.  
-- **Only one discounted product was returned**, showing strong discounting performance.  
-- **Cancellation rate is 9.1%**, within normal operational range.
+A complete operational dashboard was built using the cleaned datasets.  
+It includes revenue insights, product category performance, return behavior, and geographic sales trends.
+
+### 🔹 Full Dashboard  
+![Full Dashboard](05_visuals/Full_View_Dashboard.png)
+
+---
+
+## 📈 Key Visuals (Power BI)
+
+### **1️⃣ Total Revenue**
+![Total Revenue](05_visuals/Total_Revenue.png)
+
+### **2️⃣ Revenue by Category**
+![Revenue by Category](05_visuals/Total_Revenue_by_category.png)
+
+### **3️⃣ Revenue Over Time**
+![Revenue Over Time](05_visuals/Revenue_Over_Time.png)
+
+### **4️⃣ Revenue by City**
+![Revenue by City](05_visuals/Total_Revenue_by_city.png)
+
+### **5️⃣ Top Revenue-Generating Products**
+![Revenue by Product](05_visuals/Total_Revenue_by_product.png)
+
+### **6️⃣ Return Rate KPI**
+![Return Rate](05_visuals/Return_Rate.png)
+
+### 📥 Power BI File  
+Download or explore the dashboard:
+06_powerbi/Ecommerce_Ops_Analytics_Dashboard.pbix
+
+
+---
+
+## 🔍 Key Business Questions Answered
+
+Queries and insights include:
+
+1. Top 10 customers by total revenue.
+2. Average Order Value (AOV) from delivered orders only.
+3. Products that have generated more than $1,000 in total net revenue.
+--     (delivered orders only)  
+4. Customers with ≥ 3 orders in the last 90 days
+--     (based on order_date relative to current date)
+5. For each product category, total units sold and total revenue.
+--     (delivered orders only) 
+6. Which warehouse has the fastest average delivery time?
+7. Identify all orders that had discounts applied AND were later returned.  
+8. For each customer, calculate their most recent order date. 
+9. What percentage of orders were cancelled in the last 60 days? 
+10. Top 3 carriers by on-time delivery rate.
+
+All SQL is located in **`04_sql/03_analysis.sql`**.
+
+---
+
+## 📌 Example Insights
+
+- **Electronics** and **Sports** drive the majority of revenue.  
+- **Beauty** sells the most units but contributes low revenue due to low price point.  
+- **Return Rate = 0.17%**, well within normal operational range.  
+- Revenue increased consistently **from 2024 → 2025**.  
+- Sales are widely distributed across major U.S. cities.  
 
 ---
 
 ## 🚀 Next Steps
 
 - Build customer segmentation using **RFM Analysis**  
-- Add dashboards (Power BI or Tableau)  
-- Expand SQL with advanced window functions  
-- Create predictive models (order frequency, return probability)  
-- Begin second analytics project for deeper portfolio depth  
+- Expand SQL using window functions for deeper insights  
+- Add forecasting models (purchase probability, return likelihood)  
+- Begin a second analytics project to expand portfolio depth  
 
 ---
 
-## 📞 Contact
-
-If you'd like to discuss the project or collaborate:
+## 👋 Contact
 
 **Jaylund Harris**  
-Aspiring Data Analyst | SQL • Python • Operations Analytics  
-Gmail: jaylundharris@gmail.com
-GitHub: (https://github.com/Jaylundharris)
+Aspiring Data Analyst • SQL • Python • Operations Analytics  
+Email: **jaylundharris@gmail.com**  
+GitHub: https://github.com/Jaylundharris  
 LinkedIn: https://www.linkedin.com/in/jaylund-harris-571936384/
 
 ---
 
 ## ⭐ Why This Project Matters
 
-This project was built to demonstrate the **four essential analyst skills**:
+This project was created to demonstrate the **four essential analytics skills**:
 
-1. **Data Cleaning**  
+1. **Data Cleaning (Python)**  
 2. **SQL Querying**  
-3. **Analytical Thinking**  
-4. **Business Communication**
+3. **Analytical Thinking & KPIs**  
+4. **Business Communication**  
+
+A complete end-to-end workflow — the same structure used in real analyst roles.
+
+---
