@@ -40,7 +40,7 @@ Simulate real-world work performed by Data Analysts in:
 
 ## 📁 Project Structure
 
-
+```plaintext
 01_ecommerce_ops_analytics/
 │
 ├── data/
@@ -77,7 +77,7 @@ Simulate real-world work performed by Data Analysts in:
 │
 ├── LICENSE
 └── README.md
-
+```
 
 ---
 
