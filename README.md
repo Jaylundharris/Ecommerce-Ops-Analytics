@@ -125,7 +125,7 @@ It includes revenue insights, product category performance, return behavior, and
 ![Revenue by Product](05_visuals/Total_Revenue_by_product.png)
 
 ### **6️⃣ Return Rate KPI**
-![Return Rate](05_visuals/Return_Rate.png)
+![Return Rate](05_visuals/IMG_2797.jpeg)
 
 ### 📥 Power BI File  
 Download or explore the dashboard:
