@@ -103,7 +103,7 @@ A complete operational dashboard was built using the cleaned datasets.
 It includes revenue insights, product category performance, return behavior, and geographic sales trends.
 
 ### 🔹 Full Dashboard  
-![Full Dashboard](05_visuals/Full_View_Dashboard.png)
+![Full Dashboard](05_visuals/EBA68222-121B-4C71-9CF9-9B88BFD40438)
 
 ---
 
