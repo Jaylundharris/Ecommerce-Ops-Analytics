@@ -110,7 +110,7 @@ It includes revenue insights, product category performance, return behavior, and
 ## 📈 Key Visuals (Power BI)
 
 ### **1️⃣ Total Revenue**
-![Total Revenue](05_visuals/Total_Revenue.png)
+![Total Revenue](05_visuals/IMG_0450.jpeg)
 
 ### **2️⃣ Revenue by Category**
 ![Revenue by Category](05_visuals/Total_Revenue_by_category.png)
