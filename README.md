@@ -113,16 +113,16 @@ It includes revenue insights, product category performance, return behavior, and
 ![Total Revenue](05_visuals/IMG_0450.jpeg)
 
 ### **2️⃣ Revenue by Category**
-![Revenue by Category](05_visuals/Total_Revenue_by_category.png)
+![Revenue by Category](05_visuals/IMG_0451.jpeg)
 
 ### **3️⃣ Revenue Over Time**
-![Revenue Over Time](05_visuals/Revenue_Over_Time.png)
+![Revenue Over Time](05_visuals/IMG_0452.jpeg)
 
 ### **4️⃣ Revenue by City**
 ![Revenue by City](05_visuals/Total_Revenue_by_city.png)
 
 ### **5️⃣ Top Revenue-Generating Products**
-![Revenue by Product](05_visuals/Total_Revenue_by_product.png)
+![Revenue by Product](05_visuals/IMG_0453.jpeg)
 
 ### **6️⃣ Return Rate KPI**
 ![Return Rate](05_visuals/IMG_2797.jpeg)
